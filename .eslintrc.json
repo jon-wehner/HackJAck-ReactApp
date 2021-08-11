@@ -20,5 +20,8 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "react/jsx-filename-extension": "off",
+        "no-use-before-define": "off",
+        "comma-dangle": "off"
     }
 }
