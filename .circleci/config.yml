@@ -1,0 +1,22 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@4.1  
+jobs: 
+  run-frontend-tests:
+    executor: node/default
+    steps:
+      -checkout
+      -restore_cache:
+        keys:
+          - node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
+      -run: 
+        name: install packages
+        command: npm install
+      -run:
+        name: Run React Tests
+        command: npm test
+workflows:
+  test:
+    jobs:
+      - run-frontend-tests
