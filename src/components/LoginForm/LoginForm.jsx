@@ -13,7 +13,7 @@ const LoginForm = () => {
       },
       body: JSON.stringify({ email, password }),
     };
-    await fetch('http://localhost:5000/api/auth/login', options);
+    await fetch(`${process.env.REACT_APP_API_URI}/auth/login`, options);
   };
   return (
     <form onSubmit={login}>
