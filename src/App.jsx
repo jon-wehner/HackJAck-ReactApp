@@ -7,9 +7,11 @@ import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 function App() {
   return (
     <div className="App">
-      <Link to="/login">Login</Link>
-      <Link to="/register">Register</Link>
       <Switch>
+        <Route path="/">
+          <Link to="/login">Login</Link>
+          <Link to="/register">Register</Link>
+        </Route>
         <Route path="/login">
           <LoginForm />
         </Route>
