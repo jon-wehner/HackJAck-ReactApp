@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 import LoginForm from './components/LoginForm/LoginForm';
 import RegistrationForm from './components/RegistrationForm/RegistrationForm';
@@ -7,6 +7,8 @@ import RegistrationForm from './components/RegistrationForm/RegistrationForm';
 function App() {
   return (
     <div className="App">
+      <Link to="/login">Login</Link>
+      <Link to="/register">Register</Link>
       <Switch>
         <Route path="/login">
           <LoginForm />

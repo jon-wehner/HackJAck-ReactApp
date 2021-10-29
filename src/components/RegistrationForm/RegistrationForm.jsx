@@ -13,7 +13,7 @@ const RegistrationForm = () => {
       </label>
       <label htmlFor="name">
         Name:
-        <input type="name" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
       </label>
       <label htmlFor="password">
         Password:
