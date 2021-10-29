@@ -15,7 +15,7 @@ const RegistrationForm = () => {
         'Content-Type': 'application/JSON',
       },
       body: JSON.stringify({
-        email, username, confirmPassword, password,
+        email, username, name, confirmPassword, password,
       }),
     };
     await fetch(`${process.env.REACT_APP_API_URI}/auth/register`, options);
