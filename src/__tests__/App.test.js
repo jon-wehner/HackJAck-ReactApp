@@ -4,6 +4,6 @@ import App from '../App';
 
 test('renders the login form', () => {
   render(<App />);
-  const emailField = screen.getByText(/email/i);
-  expect(emailField).toBeInTheDocument();
+  const loginLink = screen.getByText("Login");
+  expect(loginLink).toBeInTheDocument();
 });
